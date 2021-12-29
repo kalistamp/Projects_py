@@ -5,6 +5,7 @@
 # A Simple Command Line Game
 spam = 'a simple command line game\n by: kalistamp'
 print(spam.title())
+print('\n'*2)
 #
 #
 import random
