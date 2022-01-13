@@ -16,7 +16,7 @@ print(x * 2)
 import requests
 from bs4 import BeautifulSoup
 
-url = input(f' Enter Link:  ')
+url = input(f' Enter a Link to be Scrapped:  ')
 if ('https' or 'http') in url:
     data = requests.get(url)
 else:
