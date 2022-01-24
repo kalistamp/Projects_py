@@ -23,7 +23,7 @@ else:
     page_data = requests.get('https://' + URL)
     print(page_data)
 
-# By adding "print(page_data)" the output will show a "Response [403]" if the request was successful 
+# By adding "print(page_data)" the output will show a "Response [200]" if the request was successful 
 
 soup_parser = BeautifulSoup(page_data.text, 'html.parser')
 
