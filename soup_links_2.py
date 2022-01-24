@@ -23,6 +23,8 @@ else:
     page_data = requests.get('https://' + URL)
     print(page_data)
 
+# By adding "print(page_data)" the output will show a "Response [403]" if the request was successful 
+
 soup_parser = BeautifulSoup(page_data.text, 'html.parser')
 
 links_grabbed = []
@@ -33,7 +35,7 @@ for link in soup_parser.find_all('a'):
     links_grabbed.append(link.get('href') + '\n')
 
 with open('kaliscrape.txt', 'a') as done:
-    print(*links, sep = '\n', file = done )
+    print(*links_grabbed, sep = '\n', file = done )
 
 # When finally printing and saving "done" file, add: sep='\n' to print out everything extracted in clean format
 
@@ -44,3 +46,6 @@ with open('kaliscrape.txt', 'a') as done:
 # 3. Validate the URL for 'http' and 'https'
 # 4. Define an empty array - - ? (WTF Does that mean ..)
 # 5. Append the data in that array and save the data in the kaliscrape.txt file
+
+
+
