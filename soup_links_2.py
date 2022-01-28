@@ -47,6 +47,8 @@ with open('kaliscrape_NG.txt', 'a') as done:
     print(*links_grabbed, sep = '\n', file = done )
     print('[+] Total Number of links Found: ', len(links_grabbed))
 
+print(x*2)
+print('Links stored in output TXT file.')
 # By adding "len(links_grabbed)" [Which is the list we set to store to hyperlinks grabbed] , we can display the number of links grabbed as an output 
 
 # When finally printing and saving "done" file, add: sep='\n' to print out everything extracted in clean format
