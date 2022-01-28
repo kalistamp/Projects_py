@@ -17,7 +17,7 @@ print(x)
 print(Fore.MAGENTA + spam.title())
 print(x*2)
 
-URL = input(f'Enter Link to be parsed for all embedded Links:')
+URL = input(f'Enter Link to be parsed for all embedded Links:    ')
 
 # Add an if/else statement to include "https" befpre the url if it is not already included
 
