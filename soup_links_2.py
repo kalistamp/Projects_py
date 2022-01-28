@@ -1,16 +1,21 @@
 
-name = 'by: kalistamp'
+spam = 'by: kalistamp'
 x = ' '
-print(x)
-print(name.title())
-print(x*2)
 
 # Required Py Libraries - [ Requirements.txt ]
 # pip install requests
 # pip install bs4
+# pip install colorama
 
 import requests
+import colorama
 from bs4 import BeautifulSoup
+from colorama import Fore
+colorama.init(autoreset = True)
+
+print(x)
+print(Fore.MAGENTA + spam.title())
+print(x*2)
 
 URL = input(f'Enter Link to be parsed for all embedded Links:')
 
