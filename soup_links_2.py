@@ -19,7 +19,7 @@ print(x*2)
 
 
 
-URL = input(f'Enter Link to be parsed for all embedded Links:   ')
+URL = input(f'Enter URL to be parsed for all embedded Links:   ')
 
 # Add an if/else statement to include "https" befpre the url if it is not already included
 
@@ -37,6 +37,7 @@ soup_parser = BeautifulSoup(page_data.text, 'html.parser')
 
 links_grabbed = []
 
+
 # Don't forget the 'href' .... [ "Get all the links from <a> tags with attribute href, and store it in lists variable." ]
 
 for link in soup_parser.find_all('a'):
@@ -44,8 +45,9 @@ for link in soup_parser.find_all('a'):
 
 with open('kaliscrape_NG.txt', 'a') as done:
     print(*links_grabbed, sep = '\n', file = done )
-    print('[+] Total Number of links Found: ', len(URL))
+    print('[+] Total Number of links Found: ', len(links_grabbed))
 
+# By adding "len(links_grabbed)" [Which is the list we set to store to hyperlinks grabbed] , we can display the number of links grabbed as an output 
 
 # When finally printing and saving "done" file, add: sep='\n' to print out everything extracted in clean format
 
