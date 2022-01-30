@@ -39,16 +39,19 @@ links_grabbed = []
 
 
 # Don't forget the 'href' .... [ "Get all the links from <a> tags with attribute href, and store it in lists variable." ]
+# Adding "print(link.get('href'))" will display in a row on terminal of all links that were grabbed and saved 
 
 for link in soup_parser.find_all('a'):
     links_grabbed.append(link.get('href') + '\n')
+    print(link.get('href'))
 
 with open('kaliscrape_NG.txt', 'a') as done:
     print(*links_grabbed, sep = '\n', file = done )
+    print(x*2)
     print('[+] Total Number of links Found: ', len(links_grabbed))
 
 print(x*2)
-print('Links stored in output TXT file.')
+print('[+] Links stored in output TXT file.')
 # By adding "len(links_grabbed)" [Which is the list we set to store to hyperlinks grabbed] , we can display the number of links grabbed as an output 
 
 # When finally printing and saving "done" file, add: sep='\n' to print out everything extracted in clean format
