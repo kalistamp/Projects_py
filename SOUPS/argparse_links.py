@@ -31,20 +31,48 @@ MAG = Fore.MAGENTA
 RESET = colorama.Fore.RESET
 LIT = Style.BRIGHT
 
-print(x)
-print(BLUE + LIT + spam.title())     # TITLE PRINTED TWICE - -
-print(f'{MAG}{LIT}{spam.title()}')
-print(x*2)
+# source - http[:]//patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+def banner():
+    version = "1.0"
+    ascii_banner = f"""{BLUE}{LIT}
+                                                                                                                                                        
+
+  /$$       /$$$$$$ /$$   /$$ /$$   /$$       /$$$$$$$$  /$$   /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$$       
+| $$      |_  $$_/| $$$ | $$| $$  /$$/      | $$_____//$$$$  | $$$ | $$| $$__  $$ /$$__  $$| $$__  $$      
+| $$        | $$  | $$$$| $$| $$ /$$/       | $$     |_  $$  | $$$$| $$| $$  \ $$|__/  \ $$| $$  \ $$      
+| $$        | $$  | $$ $$ $$| $$$$$/        | $$$$$    | $$  | $$ $$ $$| $$  | $$   /$$$$$/| $$$$$$$/      
+| $$        | $$  | $$  $$$$| $$  $$        | $$__/    | $$  | $$  $$$$| $$  | $$  |___  $$| $$__  $$      
+| $$        | $$  | $$\  $$$| $$\  $$       | $$       | $$  | $$\  $$$| $$  | $$ /$$  \ $$| $$  \ $$      
+| $$$$$$$$ /$$$$$$| $$ \  $$| $$ \  $$      | $$      /$$$$$$| $$ \  $$| $$$$$$$/|  $$$$$$/| $$  | $$      
+|________/|______/|__/  \__/|__/  \__/      |__/     |______/|__/  \__/|_______/  \______/ |__/  |__/      
+                                                                                                           
+                                                                                                           
+
+    """
+    print(ascii_banner)
+
+
+banner()
+
+
+
+
+
+#print(x)
+print(RED + LIT + spam.title())     # TITLE PRINTED TWICE - -
+print(f'{BLUE}{LIT}{spam.title()}')
+#print(x*2)
 
 # MUST add format argument "f" before the string if you would like to include a defined variable inside the string "{RESET}"
 parser = argparse.ArgumentParser(description= f"{RED}{LIT} DESCRIPTION: Enter URL to be parsed for all embedded Links [ ]  {RESET} ")
-parser.add_argument("URL", help="The URL to extract links from.")
+parser.add_argument("URL", help=f"{BLUE}{LIT}The URL to extract links from.{RESET}")
 
 # Unless you add the two optional switches before help ("-o", "--output") like you did below, 
 # The arguments being made will be "positional arguments" (required) instead of "optional arguments", like the arguments below with switched defined
 
-parser.add_argument("-O", "--output", help= f"{RED}{LIT} Weather to save the output in a file. Default is False(Filename=domain-name_links.txt) {RESET} ")
-parser.add_argument('-No', '--no-output', help= f'{RED}{LIT} Turn off the Output Function {RESET}')
+parser.add_argument("-O", "--output", help= f" Weather to save the output in a file. Default is False(Filename=<domain.name>_links.txt) {RESET} ")
+parser.add_argument('-No', '--no-output', help= f' Turn off the Output Function ')
 
 # ADD MORE ARGUMENTS HERE - - 
 
