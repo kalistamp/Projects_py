@@ -1,8 +1,13 @@
 
+
 # Required Py Libraries - [ Requirements.txt ]
 # pip install requests
 # pip install bs4
 # pip install colorama
+
+# USAGE :
+#
+# python3 git_find.py kalistamp
 
 import requests
 import colorama
@@ -42,11 +47,9 @@ print(x)
 print(f'{BLUE}{LIT} By: Kalistamp')
 print(x*2)
 
-
 parser = argparse.ArgumentParser(f'{RED}{LIT} DESCRIPTION: Enter Github Username [   ]  {RESET}')
-# Positional arguments ....
+parser.add_argument('github', help='Enter the USERNAME of Github Account')
 
-parser.add_argument('-g', '--github', help='Enter the USERNAME of Git Account after the \"-g\" switch')
 
 args = parser.parse_args()
 
