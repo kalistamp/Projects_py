@@ -94,6 +94,9 @@ if args.github:
         else:
             print(f'{RED}{LIT}Result =  {response}')
             print(x*2)
-            print(f'{RED}{LIT}[!] Invalid USERNAME Given, Try Again...')
+            print(f'{RED}{LIT}[!] Invalid USERNAME{RESET} ¯\_(ツ)_/¯ \n ')
+            print(x)
+            print(f'{RED}{LIT}Please Try Again ...')
+            print(x)
     except KeyboardInterrupt:
         print('exit boiii')
