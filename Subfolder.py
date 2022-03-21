@@ -1,36 +1,7 @@
 
 
-# CREATES INDIVIDUAL CATEGORIZED FOLDERS FOR ANY INVESTIGATION 
+# CREATES INDIVIDUAL CATEGORIZED FOLDERS FOR ANY RECONNAISSANCE
 
-
-import os
-
-main = 'Target'
-sub_one = 5
-
-output = input(f'enter the output Path:  ')
-
-chdir = os.path.realpath('%', output)
-
-chdir(output)
-
-print(os.mkdir(str(main)))
-
-print(os.mkdir(str(sub)))
-
-#
-# THE ABOVE CODE WILL NOT WORK, WAS ORIGONALLY GETTING THE ERROR "TypeError: 'str' object is not callable" ...
-#
-# WAS TOLD TO ADD A "%" IN THE STRING TRYING TO BE PRINTED ... SO I CHANGED THE "chdir" VARIABLE TOO "os.path.realpath('%', output)" SO THAT THERE IS A PERCENTAGE ADDED TO THE "output"
-#
-# NOW IM JUST RECEIVING THE ERROR "TypeError: realpath() takes 1 positional argument but 2 were given" .... 
-#
-# FIX AND FINISH THIS ABOVE CODE SO THAT WHEN IT PRINTS THE DESIRED FOLDERS I WANT THAT THERE ARE ALL CREATED IN WHATEVER OUTPUT DIRECTORY THE USER WANTS THEM CREATED IN ....
-#
-# AFTER THAT ... FIGURE OUT HOW TO CREATE CUSTOM NAMED TXT FILES INSIDE THOSE FOLDERS THAT WERE JUST CREATED
-#
-# GONNA TAKE SOME WORK 
-#
 
 import os
 
@@ -41,14 +12,16 @@ sub_tree = 'Connections'
 sub_four = 'Work'
 sub_five = 'Extras'
 
-print(os.mkdir(str(main)))
-print(os.mkdir(str(sub_one)))
-print(os.mkdir(str(sub_two)))
-print(os.mkdir(str(sub_tree)))
-print(os.mkdir(str(sub_four)))
-print(os.mkdir(str(sub_five)))
+os.mkdir(main, mode=0o777)
+# "0o777" is Defauly Mode to unlock all permissions ...
+os.mkdir(sub_one, mode=0o777)
+os.mkdir(sub_two, mode=0o777)
+os.mkdir(sub_tree, mode=0o777)
+os.mkdir(sub_four, mode=0o777)
+os.mkdir(sub_five, mode=0o777)
 
-#
-# NOT3:
-# WHY DO THE FOLDERS GET CREATED LOCKED WITHOUT SUDO PERMISSIONS?
-# 
+file = open("test.txt", "w") 
+file.write("Your text goes here") 
+file.close()
+
+# [ "os.chmod" can change the permissions of anyy Directory or File created by "os", or any other arugment you use such as "open/write" ]
