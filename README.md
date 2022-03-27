@@ -2,6 +2,6 @@
 #
 # PROJECTS | SOURCES :
 
-[ REAL PYTHON ep. 91 ]
+https://github.com/HightechSec/Python-Projects
 
-https://realpython.com/podcasts/rpp/91/
+[ REAL PYTHON ep. 91 ] - https://realpython.com/podcasts/rpp/91/
