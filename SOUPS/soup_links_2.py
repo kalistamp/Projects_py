@@ -42,7 +42,7 @@ links_grabbed = []
 # Adding "print(link.get('href'))" will display in a row on terminal of all links that were grabbed and saved 
 
 for link in soup_parser.find_all('a'):
-    links_grabbed.append(link.get('href') + '\n')
+    links_grabbed.append(link.get('href'))
     print(link.get('href'))
 
 with open('kaliscrape_NG.txt', 'a') as done:
@@ -63,6 +63,4 @@ print('[+] Links stored in output TXT file.')
 # 3. Validate the URL for 'http' and 'https'
 # 4. Define an empty array - - ? (WTF Does that mean ..)
 # 5. Append the data in that array and save the data in the kaliscrape.txt file
-
-
 
