@@ -17,14 +17,14 @@ RESET = colorama.Fore.RESET
 LIT = Style.BRIGHT
 
 
-print(f'{RED}{LIT}Table of Contents:')
-print(f'{RED}{LIT}cstop:{RESET} The Basics ')
-print(f'{RED}{LIT}tech:{RESET} Tech related News ')
+print(f'{RED}{LIT}TABLE OF CONTENTS:')
+print(f'{RED}{LIT}cstop(c):{RESET} The Basics ')
+print(f'{RED}{LIT}tech(t):{RESET} Tech related News ')
 print(f'{RED}{LIT}Xtras(x):{RESET} All the Extras ')
 
 def Cstop_news():
-    choice = input(f'What Section of news would you like to read? \n [Enter Acronym]:     ')
-    if choice == 'cstop':
+    choice = input(f'What Section of news would you like to read? \n [Enter the Letter]: ')
+    if choice == 'c':
         webbrowser.open_new_tab('https://therecap.org/')
         webbrowser.open_new_tab('https://news.ycombinator.com/')
         webbrowser.open_new_tab('https://www.hackingarticles.in')
@@ -32,10 +32,10 @@ def Cstop_news():
         webbrowser.open_new_tab('https://www.theepochtimes.com/')
         webbrowser.open_new_tab('https://www.mintpressnews.com/')
         webbrowser.open_new_tab('https://therecord.media/')
-        webbrowser.open_new_tab(' ')
-    elif choice == 'tech':
+    elif choice == 't':
         webbrowser.open_new_tab('https://krebsonsecurity.com/')
         webbrowser.open_new_tab('https://dumpoir.com/v/llllap3xllll')  # He Posts Awesome Repos :)
+        webbrowser.open_new_tab('https://www.producthunt.com/')
         webbrowser.open_new_tab('https://securityaffairs.co/wordpress/')
         webbrowser.open_new_tab('https://cybersecurity-magazine.com/')
         webbrowser.open_new_tab('https://www.hackerone.com/vulnerability-and-security-testing-blog')
@@ -54,6 +54,6 @@ def Cstop_news():
         webbrowser.open_new_tab('https://www.propublica.org/')
         webbrowser.open_new_tab('https://viewdns.info/iphistory/?domain=therecap.org')
     else:
-        print('It seems you made a typo, that secrtion does not exist')
+        print('It seems you made a typo, that section does not exist')
 
 Cstop_news()
