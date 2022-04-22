@@ -23,7 +23,7 @@ print(f'{RED}{LIT}tech:{RESET} Tech related News ')
 print(f'{RED}{LIT}Xtras(x):{RESET} All the Extras ')
 
 def Cstop_news():
-    choice = input(f'What Section of news would you like to read today? \n [Enter Acronym]:     ')
+    choice = input(f'What Section of news would you like to read? \n [Enter Acronym]:     ')
     if choice == 'cstop':
         webbrowser.open_new_tab('https://therecap.org/')
         webbrowser.open_new_tab('https://news.ycombinator.com/')
