@@ -26,6 +26,7 @@ def Cstop_news():
     choice = input(f'What Section of news would you like to read? \n [Enter the Letter]: ')
     if choice == 'c':
         webbrowser.open_new_tab('https://therecap.org/')
+        webbrowser.open_new_tab('https://www.trickster.dev/')
         webbrowser.open_new_tab('https://news.ycombinator.com/')
         webbrowser.open_new_tab('https://www.hackingarticles.in')
         webbrowser.open_new_tab('https://www.ibtimes.com')
