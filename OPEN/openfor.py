@@ -30,7 +30,7 @@ def Forums():
         webbrowser.open_new_tab('https:-//sinister.ly/')
         webbrowser.open_new_tab(' ')
     elif choice == 'o':
-        file = open(f"ONI", "w") 
+        file = open(f"ONI.txt", "w")
         file.write("""
 
 Sours - 
@@ -57,8 +57,9 @@ http://rambleeeqrhty6s5jgefdfdtc6tfgg4jj6svr4jpgk4wjtg3qshwbaad.onion/
 
     """)
         file.close()
+        print('[+] Onion Links Printed in Script Directory -')
     elif choice == 'r':
-        file = open(f"RAN", "w") 
+        file = open(f"RAN.txt", "w") 
         file.write("""
 
 Sours -  
@@ -137,6 +138,7 @@ Xing - http://xingnewj6m4qytljhfwemngm7r7rogrindbq7wrfeepejgxc3bwci7qd.onion
 
     """)
         file.close()
+        print('[+] Rans Sources Printed in Script Directory -')
     else:
         print('It seems you made a typo, that section does not exist')
 
