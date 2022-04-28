@@ -1,2 +1,2 @@
-Open sesame Py
-https://-github.com/Igglybuff/awesome-piracy
+## Open sesame Py
+- https://-github.com/Igglybuff/awesome-piracy
