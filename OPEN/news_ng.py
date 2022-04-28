@@ -28,6 +28,8 @@ def Cstop_news():
         websites = [        'https://therecap.org/',
         'https://www.trickster.dev/',
         'https://news.ycombinator.com/',
+        'https://www.reddit.com/r/privacy/',
+        'https://www.reddit.com/r/Piracy/',
         'https://www.hackingarticles.in',
         'https://www.ibtimes.com',
         'https://www.theepochtimes.com/',
