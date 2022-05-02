@@ -30,3 +30,5 @@ https://telegram.me/drwebbot
 
 """)
 file.close()
+
+print(' [+] Recource list printed in current directory')
