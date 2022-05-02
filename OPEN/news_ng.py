@@ -63,6 +63,6 @@ def Cstop_news():
         for url in websites:
             webbrowser.open_new_tab(url)
     else:
-        print('It seems you made a typo, that section does not exist')
+        print(' [!] It seems you made a typo, that section does not exist')
 
 Cstop_news()
