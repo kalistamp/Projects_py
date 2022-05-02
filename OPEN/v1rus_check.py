@@ -3,6 +3,7 @@
 
 import os
 
+x = ' '
 sources = [       'https://github.com/kalistamp',
 'https://www.virustotal.com/gui/home/upload',
 'https://vms.drweb.com/online/?lng=en',
@@ -34,6 +35,7 @@ https://telegram.me/drwebbot
 
         """)
         file.close()
+        print(x)
         print('[+] Recource list printed in current directory')
     else:
         print(' [!] It seems you made a typo, that option does not exist')
