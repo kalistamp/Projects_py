@@ -14,6 +14,7 @@ print(x*2)
 
 sources = [
     'https://therecap.org/chrome-ex/',
+    'https://www.qbittorrent.org/download.php',
         'https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en',
         'https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci',
         'https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en',
@@ -30,6 +31,7 @@ def Chrome():
     choice = input(f'What Section of would you like to open? \n [Enter the Letter]: ')
     if choice == 'a':
         webbrowser.open_new_tab('https://therecap.org/chrome-ex/')
+        webbrowser.open_new_tab('https://www.qbittorrent.org/download.php')
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en')
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci')
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en')
