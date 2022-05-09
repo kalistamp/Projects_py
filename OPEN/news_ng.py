@@ -37,6 +37,7 @@ def open_news():
     elif choice == 't':
         websites = [       'https://krebsonsecurity.com/',
         'https://dumpoir.com/v/llllap3xllll',
+        'https://unredactedmagazine.com/',
         'https://www.producthunt.com/',
         'https://securityaffairs.co/wordpress/',
         'https://cybersecurity-magazine.com/',
@@ -81,6 +82,7 @@ def print_news():
     elif choice == 't':
         websites = [       'https://krebsonsecurity.com/',
         'https://dumpoir.com/v/llllap3xllll',
+        'https://unredactedmagazine.com/',
         'https://www.producthunt.com/',
         'https://securityaffairs.co/wordpress/',
         'https://cybersecurity-magazine.com/',
