@@ -1,9 +1,10 @@
 ## Open sesame Py 
 
 - [ news.py ] : Opens Lnks to bookmarked news sources 
+- [ chrome.py ] : Chrome Extensions for new OS Setup
 - [ open_directory.py ] : Open Directory search sources 
 - [ openforum.py ] : Forum Sources 
-
+- [ v1rus_check.py ] : Resources to check files for virus
 
 * * * 
 
