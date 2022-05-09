@@ -36,6 +36,8 @@ methods = """
 
                         OHMYZSHELL (2 Methods) :
 
+apt install zsh
+
 curl -
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
