@@ -38,6 +38,8 @@ methods = """
 
 apt install zsh
 
+apt install git
+
 curl -
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
