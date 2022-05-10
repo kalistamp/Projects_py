@@ -9,7 +9,7 @@
 * * * 
 
 Awesome pir4cy Lst
-- https://-github.com/Igglybuff/awesome-piracy
+- https://github.com/Igglybuff/awesome-piracy
 
 Social Analyzer
 - https://github.com/qeeqbox/social-analyzer
