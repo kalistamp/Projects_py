@@ -11,5 +11,8 @@
 Awesome pir4cy Lst
 - https://-github.com/Igglybuff/awesome-piracy
 
+Social Analyzer
+- https://github.com/qeeqbox/social-analyzer
+
 Search Engine for "Hacker News"
 - https://hn.algolia.com
