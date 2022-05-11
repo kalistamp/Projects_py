@@ -30,6 +30,7 @@ extension = [
 
 sources = [
     'https://github.com/kalistamp',
+    'https://www.google.com/chrome/',
     'https://twitter.com/1800otrack',
 ]
 
@@ -110,6 +111,6 @@ def Chrome():
         print(methods)
         print(vscode)
     else:
-        print('It seems you made a typo, that option does not exist')
+        print(' [!] It seems you made a typo, that option does not exist')
 
 Chrome()
