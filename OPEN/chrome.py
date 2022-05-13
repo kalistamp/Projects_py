@@ -32,6 +32,7 @@ sources = [
     'https://github.com/kalistamp',
     'https://www.google.com/chrome/',
     'https://twitter.com/1800otrack',
+    'https://wallpaperbat.com/img/430531-usa-lake-mountains-stones-scenery-lake-tahoe-nevada-nature-407420.jpg',
 ]
 
 methods = """
