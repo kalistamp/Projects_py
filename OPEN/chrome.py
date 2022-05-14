@@ -1,7 +1,8 @@
 # Chrome Extensions for new OS Setup
-# By: Kалистамп
+# author = Автор: калистамп 
 
 import webbrowser
+import time
 x = ' '
 
 print(x*2)
@@ -82,25 +83,43 @@ def Chrome():
     print(x*4)
     if choice == 'a':
         webbrowser.open_new_tab('https://therecap.org/chrome-ex/')
+        time.sleep(4)
         webbrowser.open_new_tab('https://www.qbittorrent.org/download.php')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/url-render/flhclpkhoiajoikkabbfbinnjapaflog?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/youtube-actual-top-commen/hbdmelobmfcompinikjdaiphhonbgfpn/related')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/quick-source-viewer/cfmcghennfbpmhemnnfjhkdmnbidpanb?hl=en-US')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/stethoscope/gdkkpjagibimlpgmcbaajccgahfbojec')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en')
     elif choice == 'b':
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/quick-source-viewer/cfmcghennfbpmhemnnfjhkdmnbidpanb?hl=en-US')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?hl=en')
+        time.sleep(4)
         webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en')
     elif choice == 'p':
         for number, links in enumerate(extension):
