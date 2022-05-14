@@ -3,6 +3,7 @@
 # By: калиштамп
 
 import webbrowser
+import time
 import colorama
 from colorama import Fore
 from colorama import Style
@@ -18,11 +19,7 @@ LIT = Style.BRIGHT
 
 x = ' '
 
-def open_news():
-    choice = input(f'What Section of news would you like to read? \n [Enter the Letter]: ')
-    print(x)
-    if choice == 'c':
-        websites = [        'https://therecap.org/',
+cstop = [        'https://therecap.org/',
         'https://www.trickster.dev/',
         'https://news.ycombinator.com/',
         'https://www.reddit.com/r/privacy/',
@@ -32,78 +29,69 @@ def open_news():
         'https://www.theepochtimes.com/',
         'https://www.mintpressnews.com/',
         'https://therecord.media/',]
-        for url in websites:
-            webbrowser.open_new_tab(url)
-    elif choice == 't':
-        websites = [       'https://krebsonsecurity.com/',
+
+tech = [       'https://krebsonsecurity.com/',
         'https://dumpoir.com/v/llllap3xllll',
-        'https://unredactedmagazine.com/',
         'https://www.producthunt.com/',
         'https://securityaffairs.co/wordpress/',
         'https://cybersecurity-magazine.com/',
         'https://www.hackerone.com/,vulnerability-and-security-testing-blog',
         'https://telegra.ph/Razvedka-dlya-podgotovki-DDoS-atak-03-05',
-        'https://telegra.ph/KORISN%D0%86-POSILANNYA-DLYA-DOPOMOGI-U-DDOS-ATAC%D0%86-02-27',
-        'https://www.secjuice.com/tag/osint/',
-        'https://www.wonderhowto.com/',
+        'https://telegra.ph/KORISN%D0%86-POSILANNYA-DLYA-DOPO[        ','https://therecap.org/',
+        'https://www.trickster.dev/',
+        'https://news.ycombinator.com/',
+        'https://www.reddit.com/r/privacy/',
+        'https://www.reddit.com/r/Piracy/',
+        'https://www.hackingarticles.in',
+        'https://www.ibtimes.com',
+        'https://www.theepochtimes.com/',
+        'https://www.mintpressnews.com/',
+        'https://therecord.media/',
         'https://hakin9.org/blog-2/',
-        'https://www.hackingarticles.in']
-        for url in websites:
-            webbrowser.open_new_tab(url)
-    elif choice == 'x':
-        websites = [       'http://unlimitedhangout.com/',
+        'https://www.hackingarticles.in' ]
+
+xtras = [       'http://unlimitedhangout.com/',
         'https://www.thelastamericanvagabond.com/',
         'https://www.investmentwatchblog.com/author/maizipeng/',
         'https://thegradient.pub/',
         'https://www.sciencedaily.com/',
         'https://www.propublica.org/',
         'https://viewdns.info/iphistory/?domain=therecap.org',]
-        for url in websites:
+
+KITCHEN_TABLE = cstop + tech + xtras 
+
+def open_news():
+    choice = input(f'What Section of news would you like to read? \n [Enter the Letter]: ')
+    print(x)
+    if choice == 'c':
+        for url in cstop:
+            time.sleep(2)
+            webbrowser.open_new_tab(url)
+    elif choice == 't':
+        for url in tech:
+            time.sleep(2)
+            webbrowser.open_new_tab(url)
+    elif choice == 'x':
+        for url in xtras:
+            time.sleep(2)
             webbrowser.open_new_tab(url)
     else:
         print(' [!] It seems you made a typo, that section does not exist')
 
 def print_news():
-    choice = input(f'What Section of news would you like to read? \n [Enter the Letter]: ')
+    choice = input(f'What Section of news would you like to read? \n [Enter the Letter or type "all" for everything ...]: ')
     print(x)
     if choice == 'c':
-        websites = [        'https://therecap.org/',
-        'https://www.trickster.dev/',
-        'https://news.ycombinator.com/',
-        'https://www.reddit.com/r/privacy/',
-        'https://www.reddit.com/r/Piracy/',
-        'https://www.hackingarticles.in',
-        'https://www.ibtimes.com',
-        'https://www.theepochtimes.com/',
-        'https://www.mintpressnews.com/',
-        'https://therecord.media/',]
-        for number, links in enumerate(websites):
+        for number, links in enumerate(cstop):
             print(number, links)
     elif choice == 't':
-        websites = [       'https://krebsonsecurity.com/',
-        'https://dumpoir.com/v/llllap3xllll',
-        'https://unredactedmagazine.com/',
-        'https://www.producthunt.com/',
-        'https://securityaffairs.co/wordpress/',
-        'https://cybersecurity-magazine.com/',
-        'https://www.hackerone.com/,vulnerability-and-security-testing-blog',
-        'https://telegra.ph/Razvedka-dlya-podgotovki-DDoS-atak-03-05',
-        'https://telegra.ph/KORISN%D0%86-POSILANNYA-DLYA-DOPOMOGI-U-DDOS-ATAC%D0%86-02-27',
-        'https://www.secjuice.com/tag/osint/',
-        'https://www.wonderhowto.com/',
-        'https://hakin9.org/blog-2/',
-        'https://www.hackingarticles.in']
-        for number, links in enumerate(websites):
+        for number, links in enumerate(tech):
             print(number, links)
     elif choice == 'x':
-        websites = [       'http://unlimitedhangout.com/',
-        'https://www.thelastamericanvagabond.com/',
-        'https://www.investmentwatchblog.com/author/maizipeng/',
-        'https://thegradient.pub/',
-        'https://www.sciencedaily.com/',
-        'https://www.propublica.org/',
-        'https://viewdns.info/iphistory/?domain=therecap.org',]
-        for number, links in enumerate(websites):
+        for number, links in enumerate(xtras):
+            print(number, links)
+    elif choice == 'all':
+        for number, links in enumerate(KITCHEN_TABLE):
             print(number, links)
     else:
         print(' [!] It seems you made a typo, that section does not exist')
