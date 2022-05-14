@@ -10,7 +10,7 @@ print('TABLE OF CONTENTS:')
 print(x)
 print('All (a): Open all the Extensions ')
 print('Basics (b): Just the basic Extensions ')
-print('Print (p): Just print out Extension List ')
+print('Print (p): Print out Extension List & Guides ')
 print(x*2)
 
 extension = [
@@ -28,6 +28,9 @@ extension = [
         'https://chrome.google.com/webstore/detail/stethoscope/gdkkpjagibimlpgmcbaajccgahfbojec',
         'https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en'
 ]
+
+basic = ['https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en', 'https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci', 'https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en', 'https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?hl=en', 'https://chrome.google.com/webstore/detail/quick-source-viewer/cfmcghennfbpmhemnnfjhkdmnbidpanb?hl=en-US', 'https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?hl=en', 'https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en']
+
 
 sources = [
     'https://github.com/kalistamp',
@@ -80,47 +83,15 @@ python
 
 def Chrome():
     choice = input(f'What Section of would you like to open? \n [Enter the Letter]: ')
-    print(x*4)
+    print(x*2)
     if choice == 'a':
-        webbrowser.open_new_tab('https://therecap.org/chrome-ex/')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://www.qbittorrent.org/download.php')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/url-render/flhclpkhoiajoikkabbfbinnjapaflog?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/youtube-actual-top-commen/hbdmelobmfcompinikjdaiphhonbgfpn/related')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/quick-source-viewer/cfmcghennfbpmhemnnfjhkdmnbidpanb?hl=en-US')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/stethoscope/gdkkpjagibimlpgmcbaajccgahfbojec')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en')
+        for url in extension:
+            time.sleep(3)
+            webbrowser.open_new_tab(url)
     elif choice == 'b':
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/quick-source-viewer/cfmcghennfbpmhemnnfjhkdmnbidpanb?hl=en-US')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?hl=en')
-        time.sleep(4)
-        webbrowser.open_new_tab('https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en')
+        for url in basic:
+            time.sleep(3)
+            webbrowser.open_new_tab(url)
     elif choice == 'p':
         for number, links in enumerate(extension):
             print(number, links)
