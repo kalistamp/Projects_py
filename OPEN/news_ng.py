@@ -18,6 +18,7 @@ RESET = colorama.Fore.RESET
 LIT = Style.BRIGHT
 
 x = ' '
+print(x*2)
 
 cstop = [        'https://therecap.org/',
         'https://www.trickster.dev/',
