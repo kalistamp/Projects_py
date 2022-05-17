@@ -2,36 +2,14 @@
 
 # Disclaimer: This script is for educational purposes only. None of the authors, contributors, administrators, vandals, or anyone else connected with sources, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages. 
 
+
 import webbrowser
-import colorama
-from colorama import Fore
-from colorama import Style
+import time
+x = ' '
 
-# [ COLOR LEGEND : ]
+cstop = [ 'https:-//exploit.in/', 'https:-//www.nulled.to/', 'https:-//cracked.io/' , 'https:-//sinister.ly/' 'https://duckduckgo.com/']
 
-colorama.init(autoreset=True)
-RED = Fore.RED
-BLUE = Fore.CYAN
-MAG = Fore.MAGENTA
-RESET = colorama.Fore.RESET
-LIT = Style.BRIGHT
-
-print(f'{RED}{LIT}TABLE OF FORUM CONTENTS:')
-print(f'{RED}{LIT}cstop(c):{RESET} Open Clearnets ')
-print(f'{RED}{LIT}tech(o):{RESET} Print Onion Lnks ')
-print(f'{RED}{LIT}Xtras(r):{RESET} Print Ran Lnks')
-
-def Forums():
-    choice = input(f'What Section would you like to access? \n [Enter the Letter]: ')
-    if choice == 'c':
-        webbrowser.open_new_tab('https:-//exploit.in/')
-        webbrowser.open_new_tab('https:-//www.nulled.to/')
-        webbrowser.open_new_tab('https:-//cracked.io/')
-        webbrowser.open_new_tab('https:-//sinister.ly/')
-        webbrowser.open_new_tab(' ')
-    elif choice == 'o':
-        file = open(f"ONI.txt", "w")
-        file.write("""
+onions = '''
 
 Sours - 
 https://tor.taxi/  
@@ -54,13 +32,10 @@ RAMBLE -
  
 http://rambleeeqrhty6s5jgefdfdtc6tfgg4jj6svr4jpgk4wjtg3qshwbaad.onion/
 
+'''
 
-    """)
-        file.close()
-        print('[+] Onion Links Printed in Script Directory -')
-    elif choice == 'r':
-        file = open(f"RAN.txt", "w") 
-        file.write("""
+ran = '''
+
 
 Sours -  
 https://www.ransom-db.com/ransomware-groups
@@ -136,10 +111,52 @@ Suncrypt - http://x2miyuiwpib2imjr5ykyjngdu7v6vprkkhjltrk4qafymtawey4qzwid.onion
 Vice Society - http://vsociethok6sbprvevl4dlwbqrzyhxcxaqpvcqt5belwvsuxaxsutyad.onion
 Xing - http://xingnewj6m4qytljhfwemngm7r7rogrindbq7wrfeepejgxc3bwci7qd.onion
 
-    """)
+'''
+
+KITCHEN = onions + ran 
+def view_forum():
+    choice = input(f'What Section would you like to access? \n [Enter the Letter or type "all" for everything ...]: ')
+    if choice == 'c':
+        for url in cstop:
+            time.sleep(2)
+            webbrowser.open_new_tab(url)
+    elif choice == 'o':
+        print(f'{onions}')
+    elif choice == 'r':
+        print(f'{ran}')
+    elif choice == 'all':
+        print(f'{KITCHEN}')
+
+def print_forum():
+    choice = input(f'What Section would you like to access? \n [Enter the Letter]: ')
+    if choice == 'c':
+        for url in cstop:
+            time.sleep(2)
+            webbrowser.open_new_tab(url)
+    elif choice == 'o':
+        file = open(f"ONI.txt", "w")
+        file.write(f'{onions}')
+        file.close()
+        print('[+] Onion Links Printed in Script Directory -')
+    elif choice == 'r':
+        file = open(f"RAN.txt", "w")
+        file.write(f'{ran}')
         file.close()
         print('[+] Rans Sources Printed in Script Directory -')
-    else:
-        print('It seems you made a typo, that section does not exist')
 
-Forums()
+which = input(f'Would you like to \"save\" or \"view\" Sections? :    ')
+
+print(x*2)
+print('TABLE OF CONTENTS:')
+print(x)
+print('cstop(c): Open Clearnets  ')
+print('tech(o): All Onion Links ')
+print('Xtras(r): Ran Links')
+print(x*2)
+
+if which == 'save':
+    print_forum()
+elif which == 'view':
+    view_forum()
+else:
+    print(' [!] It seems you made a typo - that option does not exist')
