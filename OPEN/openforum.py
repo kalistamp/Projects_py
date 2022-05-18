@@ -111,6 +111,43 @@ Suncrypt - http://x2miyuiwpib2imjr5ykyjngdu7v6vprkkhjltrk4qafymtawey4qzwid.onion
 Vice Society - http://vsociethok6sbprvevl4dlwbqrzyhxcxaqpvcqt5belwvsuxaxsutyad.onion
 Xing - http://xingnewj6m4qytljhfwemngm7r7rogrindbq7wrfeepejgxc3bwci7qd.onion
 
+******************************************************************************************
+
+UPDATE:
+
+BlackMatter: http://blackmax7su6mbwtcyo3xwtpfxpm356jj...dyd.onion/
+Prometheus: http://promethw27cbrcot.onion/blog/
+Arvin Club: http://3kp6j22pz3zkv76yutctosa6djpj4yib2...pad.onion/
+Babuk: http://nq4zyac4ukl4tykmidbzgdlvaboqeqsem...#section-3
+AvosLocker: http://avosqxh72b5ia23dl5fgwcpndkctuzqvh...lad.onion/
+Bl@kt0r: http://bl4cktorpms2gybrcyt52aakcxt6yn37b...reach.html
+Everest: http://ransomocmou6mnbquqz44ewosbkjk3o5q...sad.onion/
+Clop Leaks: http://santat7kpllt6iyvqbr7q4amdv6dzrh6p...4ad.onion/
+Conti: http://continewsnv5otx5kaoje7krkto2qbu3g...3ad.onion/
+Dopple Leaks: http://hpoo4dosa3x4ognfxpqcrjwnsigvslm7k...wad.onion/
+Grief Leaks: http://griefcameifmv4hfr3auozmovz5yi6m3h...eid.onion/
+Hive: http://hiveleakdbtnp76ulyhi52eag6c6tyc3x...zyd.onion/
+LockData: http://wm6mbuzipviusuc42kcggzkdpbhuv45sn...bqd.onion/
+Lorenz: http://lorenzmlwpzgxq736jzseuterytjueszs...oyd.onion/
+Corporate leaks: http://hxt254aygrsziejn.onion/
+Pay2Key: http://pay2key2zkg7arp3kv3cuugdaqwuesifn...sid.onion/
+Payload.bin: http://vbmisqjshn4yblehk2vbnil53tlqklxsd...5qd.onion/
+Pysa's Partners: http://pysa2bitc5ldeyfak4seeruqymqs4sj5w...tners.html
+RagnarLocker: http://rgleaktxuey67yrgspmhvtnrqtgogur35...lyd.onion/
+Ransomexx: http://rnsm777cdsjrsdlbs4v5qoeppu3px6sb2...2ad.onion/
+Happy Blog: http://dnpscnbaix6nkwvystl3yxglz7nteicqr...qyd.onion/
+SunCrypt: http://x2miyuiwpib2imjr5ykyjngdu7v6vprkk...zwid.onion
+Vice Society: http://4hzyuotli6maqa4u.onion/
+Xing Team: http://xingnewj6m4qytljhfwemngm7r7rogrin...7qd.onion/
+
+The following sites are offline:
+
+Avaddon: http://avaddongun7rngel.onion/ (v2, I couldn't find the v3 link)
+Darkside: http://darksidc3iux462n6yunevoag52ntvwp6...7id.onion/ (offline)
+Ranzy: http://37rckgo66iydpvgpwve7b2el5q2zhjw4t...oqd.onion/ (offline)
+Astro: http://anewset3pcya3xvk73hj7yunuamutxxsm...qad.onion/ (offline)
+Mount: http://mountnewsokhwilx.onion/ (v2, I couldn't find the v3 link)
+
 '''
 
 KITCHEN = onions + ran 
