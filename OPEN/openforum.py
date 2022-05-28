@@ -7,7 +7,17 @@ import webbrowser
 import time
 x = ' '
 
-cstop = [ 'https:-//exploit.in/', 'https:-//www.nulled.to/', 'https:-//cracked.io/' , 'https:-//sinister.ly/' 'https://duckduckgo.com/']
+
+# sarz or sarzstamp
+cstop = [
+'https://cracking.org/',
+ 'https://leakforums.su/',
+ 'https://cracked.io/index.php',
+ 'https://www.nulled.to/',
+ 'https://cracking.org/',
+ 'https://eternia.to/',
+
+]
 
 onions = '''
 
