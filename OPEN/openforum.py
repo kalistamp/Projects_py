@@ -12,8 +12,8 @@ x = ' '
 cstop = [
 'https://cracking.org/', #sarzstamp ?
  'https://www.nulled.to/', #kalistamp
+ 'https://cracked.io/index.php', #sarzstamp
  'https://leakforums.su/',
- 'https://cracked.io/index.php',
  'https://eternia.to/',
 
 ]
