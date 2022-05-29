@@ -7,14 +7,13 @@ import webbrowser
 import time
 x = ' '
 
-
+# Avatar == https://imgbox.com/5WMaDeqT
 # sarz or sarzstamp
 cstop = [
-'https://cracking.org/',
+'https://cracking.org/', #sarzstamp ?
+ 'https://www.nulled.to/', #kalistamp
  'https://leakforums.su/',
  'https://cracked.io/index.php',
- 'https://www.nulled.to/',
- 'https://cracking.org/',
  'https://eternia.to/',
 
 ]
