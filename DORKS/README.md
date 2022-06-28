@@ -1,0 +1,31 @@
+### Google Dork Parameters 
+
+```intitle:```
+
+```inurl:```
+
+```intext:```
+
+```define:```
+
+```site:```
+
+```phonebook:```
+
+```maps:```
+
+```book:```
+
+```info:```
+
+```movie:```
+
+```weather:```
+
+```related:```
+
+```link:```
+
+* * * 
+
+Next Fill-In Here ....
