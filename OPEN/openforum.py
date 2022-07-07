@@ -13,6 +13,7 @@ cstop = [
 'https://cracking.org/', #sarzstamp ?
  'https://www.nulled.to/', #kalistamp
  'https://cracked.io/index.php', #sarzstamp
+ 'https://breached.to/',
  'https://leakforums.su/',
  'https://eternia.to/',
 
