@@ -11,6 +11,10 @@
 Awesome pir4cy Lst
 - https://github.com/Igglybuff/awesome-piracy
 
+Search by best cybersecurity tools, resources, ctf and bugbounty platforms
+
+- https://inventory.raw.pm/
+
 Social Analyzer
 - https://github.com/qeeqbox/social-analyzer
 
